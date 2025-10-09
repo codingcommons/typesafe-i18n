@@ -12,6 +12,14 @@
 [![Generic badge](https://img.shields.io/badge/discord-support-slateblue.svg)](https://discord.gg/T27AHfaADK)
 [![Sponsor this project](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&link=https://github.com/sponsors/ivanhofer)](https://github.com/sponsors/ivanhofer)
 
+<p align="center">
+   <a href="https://github.com/ivanhofer" title="Created by Ivan Hofer (1995-2023)">
+      <img src="https://raw.githubusercontent.com/ivanhofer/typesafe-i18n/main/assets/ivan-hofer-rounded.png" alt="Ivan Hofer" width="25%" />
+   </a>
+</p>
+<p align="center">
+   <i>Created by Ivan Hofer (1995-2023)</i>
+</p>
 
 ## Advantages
 
