@@ -10,19 +10,19 @@ jobs:
       runs-on: ubuntu-latest
       if: "!contains(github.event.head_commit.message, 'chore:') && !contains(github.event.head_commit.message, 'docs:')"
       steps:
-         - uses: actions/checkout@v3
+         - uses: actions/checkout@v4
 
-         - uses: pnpm/action-setup@v2
+         - uses: pnpm/action-setup@v4
            with:
               version: 8.6.7
 
          - name: install node
-           uses: actions/setup-node@v2
+           uses: actions/setup-node@v4
            with:
               node-version: 18.16.1
               cache: 'pnpm'
 
-         - run: pnpm install --no-save
+         - run: pnpm install --frozen-lockfile
 
          - name: run linting
            run: pnpm lint
