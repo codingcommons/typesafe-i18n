@@ -40,6 +40,7 @@ const getDependencyList = async () => {
 const npmLockPath = resolve('package-lock.json')
 const yarnLockPath = resolve('yarn.lock')
 const pnpmLockPath = resolve('pnpm-lock.yaml')
+const bunLockPath = resolve('bun.lock')
 
 const getInstallCommand = async (): Promise<string | undefined> => {
 	if (await doesPathExist(npmLockPath)) {
@@ -52,6 +53,10 @@ const getInstallCommand = async (): Promise<string | undefined> => {
 
 	if (await doesPathExist(pnpmLockPath)) {
 		return 'pnpm add typesafe-i18n'
+	}
+
+	if (await doesPathExist(bunLockPath)) {
+		return 'bun add typesafe-i18n'
 	}
 
 	logger.error(
