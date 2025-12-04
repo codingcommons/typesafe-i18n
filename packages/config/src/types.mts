@@ -39,6 +39,7 @@ export type GeneratorConfig = {
 
 	adapterFileName?: string
 	generateOnlyTypes?: boolean
+	maskTranslationText?: boolean
 
 	banner?: string
 	runAfterGenerator?: string | undefined
@@ -57,6 +58,7 @@ export type GeneratorConfigWithDefaultValues = GeneratorConfig & {
 	esmImports: EsmImportsOption
 
 	generateOnlyTypes: boolean
+	maskTranslationText: boolean
 	banner: string
 	runAfterGenerator: string | undefined
 }

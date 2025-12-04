@@ -17,6 +17,7 @@ export const applyDefaultValues = async (
 	adapter: undefined,
 
 	generateOnlyTypes: false,
+	maskTranslationText: true,
 	banner: '/* eslint-disable */',
 	runAfterGenerator: undefined,
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any

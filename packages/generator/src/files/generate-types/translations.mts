@@ -16,6 +16,7 @@ export const createTranslationType = (
 	jsDocInfo: JsDocInfos,
 	nameOfType: string,
 	namespaces: string[] = [],
+	maskTranslationText = true,
 ): string => {
 	const parsedTranslationsWithoutNamespaces = parsedTranslations.filter((parsedResult) => {
 		const keys = Object.keys(parsedResult)
@@ -24,7 +25,7 @@ export const createTranslationType = (
 
 	const translationType = `type ${nameOfType} = ${wrapObjectType(parsedTranslationsWithoutNamespaces, () =>
 		mapToString(parsedTranslationsWithoutNamespaces, (parsedResultEntry) =>
-			createTranslationTypeEntry(parsedResultEntry, jsDocInfo),
+			createTranslationTypeEntry(parsedResultEntry, jsDocInfo, maskTranslationText),
 		),
 	)}`
 
@@ -46,6 +47,8 @@ export const createTranslationType = (
 					isArray(parsedTranslations) ? parsedTranslations : [parsedTranslations],
 					jsDocInfo,
 					getTypeNameForNamespace(namespace),
+					[],
+					maskTranslationText,
 				)
 			)
 		})
@@ -55,12 +58,16 @@ export const createTranslationType = (
 ${namespaceTranslationsTypes.join(NEW_LINE + NEW_LINE)}`
 }
 
-const createTranslationTypeEntry = (resultEntry: ParsedResult, jsDocInfo: JsDocInfos): string => {
+const createTranslationTypeEntry = (
+	resultEntry: ParsedResult,
+	jsDocInfo: JsDocInfos,
+	maskTranslationText: boolean,
+): string => {
 	if (isParsedResultEntry(resultEntry)) {
 		const { key, args, parentKeys } = resultEntry
 
 		const nestedKey = getNestedKey(key, parentKeys)
-		const jsDocString = createJsDocsString(jsDocInfo[nestedKey] as JsDocInfo, true, false, true)
+		const jsDocString = createJsDocsString(jsDocInfo[nestedKey] as JsDocInfo, true, false, maskTranslationText)
 		const translationType = generateTranslationType(args)
 
 		return `
@@ -68,7 +75,7 @@ const createTranslationTypeEntry = (resultEntry: ParsedResult, jsDocInfo: JsDocI
 	}
 
 	return processNestedParsedResult(resultEntry, (parsedResultEntry) =>
-		createTranslationTypeEntry(parsedResultEntry, jsDocInfo),
+		createTranslationTypeEntry(parsedResultEntry, jsDocInfo, maskTranslationText),
 	)
 }
 
