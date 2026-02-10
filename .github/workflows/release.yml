@@ -42,7 +42,7 @@ jobs:
            run: pnpm build
 
          - name: create browser artifacts
-           uses: actions/upload-artifact@v2
+           uses: actions/upload-artifact@v4
            with:
               name: typesafe-i18n-browser
               path: dist/
