@@ -11,9 +11,9 @@
   },
   "devDependencies": {
     "tiny-glob": "^0.2.9",
-    "tsx": "^3.12.7",
+    "tsx": "^3.12.10",
     "typesafe-utils": "^1.16.2",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "uvu": "^0.5.6",
     "watchlist": "^0.3.1"
   },

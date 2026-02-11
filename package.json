@@ -148,21 +148,21 @@
 	"devDependencies": {
 		"@size-limit/preset-small-lib": "^8.2.6",
 		"@types/glob": "^8.1.0",
-		"@types/node": "^18.17.3",
+		"@types/node": "^18.17.17",
 		"@typescript-eslint/eslint-plugin": "^5.62.0",
 		"@typescript-eslint/parser": "^5.62.0",
-		"eslint": "^8.46.0",
+		"eslint": "^8.49.0",
 		"eslint-config-prettier": "^8.10.0",
 		"eslint-plugin-prettier": "5.0.0-alpha.2",
 		"husky": "^8.0.3",
-		"lint-staged": "^13.2.3",
+		"lint-staged": "^13.3.0",
 		"markdown-link-check": "^3.11.2",
-		"prettier": "^3.0.1",
+		"prettier": "^3.0.3",
 		"rimraf": "^5.0.1",
 		"size-limit": "^8.2.6",
 		"tiny-glob": "^0.2.9",
-		"tsx": "^3.12.7",
-		"typescript": "^5.1.6"
+		"tsx": "^3.12.10",
+		"typescript": "^5.2.2"
 	},
 	"peerDependencies": {
 		"typescript": ">=3.5.1"

@@ -5,9 +5,9 @@
     "build": "tsx esbuild.ts && tsc -p tsconfig.json --emitDeclarationOnly"
   },
   "devDependencies": {
-    "esbuild": "^0.18.18",
-    "tsx": "^3.12.7",
-    "typescript": "^5.1.6"
+    "esbuild": "^0.18.20",
+    "tsx": "^3.12.10",
+    "typescript": "^5.2.2"
   },
   "type": "module"
 }

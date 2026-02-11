@@ -6,10 +6,10 @@
     "test": "tsc --noEmit"
   },
   "devDependencies": {
-    "esbuild": "^0.18.18",
-    "svelte": "^4.1.2",
-    "tsx": "^3.12.7",
-    "typescript": "^5.1.6"
+    "esbuild": "^0.18.20",
+    "svelte": "^4.2.0",
+    "tsx": "^3.12.10",
+    "typescript": "^5.2.2"
   },
   "type": "module"
 }

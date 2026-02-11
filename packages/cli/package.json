@@ -8,16 +8,16 @@
   "devDependencies": {
     "@types/prompts": "^2.4.4",
     "commander": "^11.0.0",
-    "esbuild": "^0.18.18",
+    "esbuild": "^0.18.20",
     "just-diff": "^6.0.2",
     "just-diff-apply": "^5.5.0",
     "kleur": "^4.1.5",
     "prompts": "^2.4.2",
     "tiny-glob": "^0.2.9",
-    "tsx": "^3.12.7",
+    "tsx": "^3.12.10",
     "type-fest": "^3.13.1",
     "typesafe-utils": "^1.16.2",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "type": "module"
 }

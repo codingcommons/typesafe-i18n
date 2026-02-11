@@ -2,7 +2,7 @@
 	"name": "snapshot-tests",
 	"devDependencies": {
 		"@angular/core": "~15.0.4",
-		"@types/react": "^18.2.18",
+		"@types/react": "^18.2.21",
 		"rxjs": "^6.6.7",
 		"typesafe-i18n": "workspace:*",
 		"vue": "3.2.39",

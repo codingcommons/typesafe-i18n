@@ -8,10 +8,10 @@
     "test:update-generated-files": "tsx test/snapshots/update.ts"
   },
   "devDependencies": {
-    "esbuild": "^0.18.18",
+    "esbuild": "^0.18.20",
     "tiny-glob": "^0.2.9",
-    "tsx": "^3.12.7",
-    "typescript": "^5.1.6",
+    "tsx": "^3.12.10",
+    "typescript": "^5.2.2",
     "uvu": "^0.5.6",
     "watchlist": "^0.3.1"
   },

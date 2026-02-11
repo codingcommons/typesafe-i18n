@@ -8,10 +8,10 @@
   },
   "devDependencies": {
     "ajv": "^6.12.6",
-    "esbuild": "^0.18.18",
+    "esbuild": "^0.18.20",
     "kleur": "^4.1.5",
     "type-fest": "^3.13.1",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "typescript-json-schema": "^0.58.1"
   },
   "type": "module"

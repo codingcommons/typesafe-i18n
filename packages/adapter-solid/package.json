@@ -6,10 +6,10 @@
     "test": "tsc --noEmit"
   },
   "devDependencies": {
-    "esbuild": "^0.18.18",
-    "solid-js": "^1.7.9",
-    "tsx": "^3.12.7",
-    "typescript": "^5.1.6"
+    "esbuild": "^0.18.20",
+    "solid-js": "^1.7.11",
+    "tsx": "^3.12.10",
+    "typescript": "^5.2.2"
   },
   "type": "module"
 }
