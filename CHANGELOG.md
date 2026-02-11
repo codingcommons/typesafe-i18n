@@ -2,6 +2,18 @@
 
 # Version 5
 
+## [5.27.0](https://github.com/codingcommons/typesafe-i18n/compare/5.26.2...5.27.0) (2026-02-11)
+
+
+### Features
+
+* add support for bun lockfile ([f86912c](https://github.com/codingcommons/typesafe-i18n/commit/f86912cece07ca71df8664782a660765ceac9be0))
+
+
+### Documentation
+
+* add tribute to Ivan Hofer, creator of typesafe-i18n ([0225d07](https://github.com/codingcommons/typesafe-i18n/commit/0225d07ec19cd661b5c386947a73fa44b490163f))
+
 ## 5.26.1 (2023-08-14)
 
 Fix:
