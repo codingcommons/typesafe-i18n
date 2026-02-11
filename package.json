@@ -32,6 +32,7 @@
 		"nodejs"
 	],
 	"license": "MIT",
+	"type": "module",
 	"module": "runtime/esm/runtime/src/index.mjs",
 	"main": "runtime/cjs/runtime/src/index.cjs",
 	"types": "types/index.d.ts",
