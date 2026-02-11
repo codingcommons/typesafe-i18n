@@ -10,6 +10,6 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
-    "typesafe-i18n": "^5.26.0"
+    "typesafe-i18n": "^5.26.2"
   }
 }
