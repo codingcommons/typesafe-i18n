@@ -55,7 +55,15 @@ const doesATranslationContainParams = (p: ParsedResult[]): boolean =>
 	)
 
 const getTypes = (
-	{ translations, baseLocale, locales, typesTemplateFileName, banner, namespaces }: GenerateTypesType,
+	{
+		translations,
+		baseLocale,
+		locales,
+		typesTemplateFileName,
+		banner,
+		namespaces,
+		maskTranslationText,
+	}: GenerateTypesType,
 	logger: Logger,
 ) => {
 	const usesNamespaces = !!namespaces.length
@@ -69,7 +77,13 @@ const getTypes = (
 
 	const jsDocsInfo = createJsDocsMapping(parsedTranslations)
 
-	const translationType = createTranslationType(parsedTranslations, jsDocsInfo, 'RootTranslation', namespaces)
+	const translationType = createTranslationType(
+		parsedTranslations,
+		jsDocsInfo,
+		'RootTranslation',
+		namespaces,
+		maskTranslationText,
+	)
 
 	const shouldImportRequiredParamsType =
 		supportsTemplateLiteralTypes && doesATranslationContainParams(parsedTranslations)

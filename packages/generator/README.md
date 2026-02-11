@@ -205,23 +205,24 @@ You can set options for the generator inside a `.typesafe-i18n.json`-file in you
 
 The available options are:
 
-| key                                                       | type                                                                                             | default value                                 |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
-| [adapter](#adapter)                                       | `'angular'  \| 'node'  \| 'react'  \| 'solid'  \| 'svelte'  \| 'vue'  \| undefined` | `undefined`                                   |
-| [adapters](#adapters)                                       | `Array<'angular' \| 'node' \| 'react' \| 'solid' \| 'svelte' \| 'vue'> \| undefined`                           | `undefined`
-| [baseLocale](#baselocale)                                 | `string`                                                                                         | `'en'`                                        |
-| [outputFormat](#outputformat)                             | `'TypeScript'` &#124; `'JavaScript'`                                                             | `'TypeScript'`                                |
-| [esmImports](#esmimports)                                 | `boolean | '.js' | 'fileEnding'                                                                                        | `false`                                       |
-| [generateOnlyTypes](#generateonlytypes)                   | `boolean`                                                                                        | `false`                                       |
-| [runAfterGenerator](#runaftergenerator)                   | `string` &#124; `undefined`                                                                      | `undefined`                                   |
-| [banner](#banner)                                         | `string`                                                                                         | `'/* eslint-disable */'`                      |
-| [outputPath](#outputpath)                                 | `string`                                                                                         | `'./src/i18n/'`                               |
-| [typesFileName](#typesfilename)                           | `string`                                                                                         | `'i18n-types'`                                |
-| [utilFileName](#utilfilename)                             | `string`                                                                                         | `'i18n-util'`                                 |
-| [formattersTemplateFileName](#formatterstemplatefilename) | `string`                                                                                         | `'formatters'`                                |
-| [typesTemplateFileName](#typestemplatefilename)           | `string`                                                                                         | `'custom-types'`                              |
-| [adapterFileName](#adapterfilename)                       | `string` &#124; `undefined`                                                                      | `undefined`                                   |
-| [tempPath](#temppath)                                     | `string`                                                                                         | `'./node_modules/typesafe-i18n/temp-output/'` |
+| key                                                       | type                                                                                 | default value                                 |
+| --------------------------------------------------------- |--------------------------------------------------------------------------------------| --------------------------------------------- |
+| [adapter](#adapter)                                       | `'angular'  \| 'node'  \| 'react'  \| 'solid'  \| 'svelte'  \| 'vue'  \| undefined`  | `undefined`                                   |
+| [adapters](#adapters)                                     | `Array<'angular' \| 'node' \| 'react' \| 'solid' \| 'svelte' \| 'vue'> \| undefined` | `undefined`
+| [baseLocale](#baselocale)                                 | `string`                                                                             | `'en'`                                        |
+| [outputFormat](#outputformat)                             | `'TypeScript'` &#124; `'JavaScript'`                                                 | `'TypeScript'`                                |
+| [esmImports](#esmimports)                                 | `boolean` \| `'.js'` \| `'fileEnding'`                                               | `false`                                       |
+| [generateOnlyTypes](#generateonlytypes)                   | `boolean`                                                                            | `false`                                       |
+| [maskTranslationText](#masktranslationtext)               | `boolean`                                                                            | `true`                                        |
+| [runAfterGenerator](#runaftergenerator)                   | `string` &#124; `undefined`                                                          | `undefined`                                   |
+| [banner](#banner)                                         | `string`                                                                             | `'/* eslint-disable */'`                      |
+| [outputPath](#outputpath)                                 | `string`                                                                             | `'./src/i18n/'`                               |
+| [typesFileName](#typesfilename)                           | `string`                                                                             | `'i18n-types'`                                |
+| [utilFileName](#utilfilename)                             | `string`                                                                             | `'i18n-util'`                                 |
+| [formattersTemplateFileName](#formatterstemplatefilename) | `string`                                                                             | `'formatters'`                                |
+| [typesTemplateFileName](#typestemplatefilename)           | `string`                                                                             | `'custom-types'`                              |
+| [adapterFileName](#adapterfilename)                       | `string` &#124; `undefined`                                                          | `undefined`                                   |
+| [tempPath](#temppath)                                     | `string`                                                                             | `'./node_modules/typesafe-i18n/temp-output/'` |
 
 
 #### `adapter`
@@ -251,6 +252,16 @@ Set this option to `'fileEnding'` if the module import needs to be done with a `
 #### `generateOnlyTypes`
 
 If you don't want to use the auto-generated helpers and instead write your own wrappers, you can set this option to `true`.
+
+#### `maskTranslationText`
+
+Controls whether zero-width space characters (U+200B) are inserted between characters in JSDoc comments for Translation types.
+
+When enabled (default), this prevents code search tools from matching the generated type file JSDoc comments when searching for translation text, directing you instead to the actual translation source files. The zero-width spaces are invisible but keep the text readable in IDE tooltips.
+
+Some code analysis tools may have issues with these invisible characters. If you encounter problems, you can disable this feature by setting this option to `false`.
+
+**Note**: This only affects the `Translation` type JSDoc comments in generated type files, not the `TranslationFunctions` type.
 
 #### `runAfterGenerator`
 

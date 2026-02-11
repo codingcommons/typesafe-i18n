@@ -224,6 +224,24 @@ testGeneratedOutput(
 	{ outputFormat: 'JavaScript' },
 )
 
+testGeneratedOutput(
+	'mask-translation-text-disabled',
+	{
+		HELLO: 'Hi {0:name}',
+		WELCOME: 'Welcome to {app}!',
+	},
+	{ outputFormat: 'JavaScript', maskTranslationText: false },
+)
+
+testGeneratedOutput(
+	'mask-translation-text-enabled',
+	{
+		HELLO: 'Hi {0:name}',
+		WELCOME: 'Welcome to {app}!',
+	},
+	{ outputFormat: 'JavaScript', maskTranslationText: true },
+)
+
 testGeneratedOutput('formatters-with-dashes', { FORMATTER: '{0|custom-formatter|and-another}' })
 
 testGeneratedOutput('formatters-with-spaces', { FORMATTER: '{0| custom formatter | and another }' })
