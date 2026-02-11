@@ -244,7 +244,7 @@ export function WrapTranslation({ message, renderComponent }: WrapTranslationPro
    return <>
       {prefix}
       {renderComponent(infix)}
-      {prefix}
+      {postfix}
    </>
 }
 ```
