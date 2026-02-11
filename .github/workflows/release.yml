@@ -1,14 +1,34 @@
-name: run tests & bump version & publish to npm
+name: release-please & publish to npm
 
 on:
    push:
       branches:
          - 'main'
 
+permissions:
+   contents: write
+   pull-requests: write
+   issues: write
+
 jobs:
-   release:
+   release-please:
       runs-on: ubuntu-latest
-      if: "!contains(github.event.head_commit.message, 'chore:') && !contains(github.event.head_commit.message, 'docs:')"
+      outputs:
+         release_created: ${{ steps.release.outputs.release_created }}
+      steps:
+         - id: release
+           uses: googleapis/release-please-action@v4
+           with:
+              config-file: release-please-config.json
+              manifest-file: .release-please-manifest.json
+
+   publish:
+      needs: release-please
+      if: ${{ needs.release-please.outputs.release_created == 'true' }}
+      runs-on: ubuntu-latest
+      permissions:
+         contents: read
+         id-token: write
       steps:
          - uses: actions/checkout@v4
 
@@ -21,6 +41,7 @@ jobs:
            with:
               node-version: 18.16.1
               cache: 'pnpm'
+              registry-url: 'https://registry.npmjs.org'
 
          - run: pnpm install --frozen-lockfile
 
@@ -29,14 +50,6 @@ jobs:
 
          - name: run tests
            run: pnpm test
-
-         - name: bump version and create tag
-           uses: 'phips28/gh-action-bump-version@master'
-           env:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           with:
-              minor-wording: 'feat'
-              major-wording: 'major'
 
          - name: build package
            run: pnpm build
@@ -47,7 +60,5 @@ jobs:
               name: typesafe-i18n-browser
               path: dist/
 
-         - name: publish to npm
-           uses: JS-DevTools/npm-publish@v1
-           with:
-              token: ${{ secrets.NPM_TOKEN }}
+         - name: publish to npm (OIDC)
+           run: npm publish --provenance

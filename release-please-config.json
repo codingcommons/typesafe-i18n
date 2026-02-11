@@ -1,0 +1,59 @@
+{
+	"$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+	"packages": {
+		".": {
+			"release-type": "node",
+			"package-name": "typesafe-i18n",
+			"changelog-path": "CHANGELOG.md",
+			"include-component-in-tag": false,
+			"include-v-in-tag": false,
+			"changelog-sections": [
+				{
+					"type": "feat",
+					"section": "Features",
+					"hidden": false
+				},
+				{
+					"type": "fix",
+					"section": "Bug Fixes",
+					"hidden": false
+				},
+				{
+					"type": "perf",
+					"section": "Performance Improvements",
+					"hidden": false
+				},
+				{
+					"type": "refactor",
+					"section": "Refactoring",
+					"hidden": false
+				},
+				{
+					"type": "docs",
+					"section": "Documentation",
+					"hidden": false
+				},
+				{
+					"type": "ci",
+					"section": "Continuous Integration",
+					"hidden": true
+				},
+				{
+					"type": "build",
+					"section": "Build System",
+					"hidden": true
+				},
+				{
+					"type": "test",
+					"section": "Tests",
+					"hidden": true
+				},
+				{
+					"type": "chore",
+					"section": "Miscellaneous",
+					"hidden": true
+				}
+			]
+		}
+	}
+}
