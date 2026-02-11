@@ -2,6 +2,10 @@
 
 # Version 5
 
+## [5.27.1] (2026-02-11)
+
+### Fix Random publishing issue
+
 ## [5.27.0](https://github.com/codingcommons/typesafe-i18n/compare/5.26.2...5.27.0) (2026-02-11)
 
 
