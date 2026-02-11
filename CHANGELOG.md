@@ -2,6 +2,13 @@
 
 # Version 5
 
+## [5.27.1](https://github.com/codingcommons/typesafe-i18n/compare/5.27.0...5.27.1) (2026-02-11)
+
+
+### Bug Fixes
+
+* updated repository information for npm provenance statement ([c0594de](https://github.com/codingcommons/typesafe-i18n/commit/c0594deaba67d08f00cdeb6ea8a9f4d15b820398))
+
 ## [5.27.0](https://github.com/codingcommons/typesafe-i18n/compare/5.26.2...5.27.0) (2026-02-11)
 
 
