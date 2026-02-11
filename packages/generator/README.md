@@ -207,20 +207,20 @@ The available options are:
 
 | key                                                       | type                                                                                             | default value                                 |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
-| [adapter](#adapter)                                       | `'angular'  \| 'node'  \| 'react'  \| 'solid'  \| 'svelte'  \| 'vue'  \| undefined` | `undefined`                                   |
-| [adapters](#adapters)                                       | `Array<'angular' \| 'node' \| 'react' \| 'solid' \| 'svelte' \| 'vue'> \| undefined`                           | `undefined`
+| [adapter](#adapter)                                       | `'angular'` \| `'node'` \| `'react'` \| `'solid'` \| `'svelte'` \| `'vue'` \| `undefined`        | `undefined`                                   |
+| [adapters](#adapters)                                     | `Array<'angular' \| 'node' \| 'react' \| 'solid' \| 'svelte' \| 'vue'>` \| `undefined`           | `undefined`                                   |
 | [baseLocale](#baselocale)                                 | `string`                                                                                         | `'en'`                                        |
-| [outputFormat](#outputformat)                             | `'TypeScript'` &#124; `'JavaScript'`                                                             | `'TypeScript'`                                |
-| [esmImports](#esmimports)                                 | `boolean | '.js' | 'fileEnding'                                                                                        | `false`                                       |
+| [outputFormat](#outputformat)                             | `'TypeScript'` \| `'JavaScript'`                                                                 | `'TypeScript'`                                |
+| [esmImports](#esmimports)                                 | `boolean` \| `'.js'` \| `'fileEnding'`                                                           | `false`                                       |
 | [generateOnlyTypes](#generateonlytypes)                   | `boolean`                                                                                        | `false`                                       |
-| [runAfterGenerator](#runaftergenerator)                   | `string` &#124; `undefined`                                                                      | `undefined`                                   |
+| [runAfterGenerator](#runaftergenerator)                   | `string` \| `undefined`                                                                          | `undefined`                                   |
 | [banner](#banner)                                         | `string`                                                                                         | `'/* eslint-disable */'`                      |
 | [outputPath](#outputpath)                                 | `string`                                                                                         | `'./src/i18n/'`                               |
 | [typesFileName](#typesfilename)                           | `string`                                                                                         | `'i18n-types'`                                |
 | [utilFileName](#utilfilename)                             | `string`                                                                                         | `'i18n-util'`                                 |
 | [formattersTemplateFileName](#formatterstemplatefilename) | `string`                                                                                         | `'formatters'`                                |
 | [typesTemplateFileName](#typestemplatefilename)           | `string`                                                                                         | `'custom-types'`                              |
-| [adapterFileName](#adapterfilename)                       | `string` &#124; `undefined`                                                                      | `undefined`                                   |
+| [adapterFileName](#adapterfilename)                       | `string` \| `undefined`                                                                          | `undefined`                                   |
 | [tempPath](#temppath)                                     | `string`                                                                                         | `'./node_modules/typesafe-i18n/temp-output/'` |
 
 
