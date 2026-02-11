@@ -18,7 +18,7 @@ jobs:
          - name: install node
            uses: actions/setup-node@v4
            with:
-              node-version: 18.16.1
+              node-version: 24
 
          - name: install dependencies
            run: npm install --no-save
