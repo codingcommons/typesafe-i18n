@@ -11,6 +11,6 @@
 		"vite": "^2.9.9"
 	},
 	"dependencies": {
-		"typesafe-i18n": "^5.26.0"
+		"typesafe-i18n": "^5.27.1"
 	}
 }
