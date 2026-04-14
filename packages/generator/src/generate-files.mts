@@ -3,6 +3,7 @@ import type { BaseTranslation, Locale } from '../../runtime/src/core.mjs'
 import { generateAngularAdapter } from './files/generate-adapter-angular.mjs'
 import { generateDenoAdapter } from './files/generate-adapter-deno.mjs'
 import { generateNodeAdapter } from './files/generate-adapter-node.mjs'
+import { generatePreactAdapter } from './files/generate-adapter-preact.mjs'
 import { generateReactAdapter } from './files/generate-adapter-react.mjs'
 import { generateSolidAdapter } from './files/generate-adapter-solid.mjs'
 import { generateSvelteAdapter } from './files/generate-adapter-svelte.mjs'
@@ -136,6 +137,9 @@ const addAdapters = (config: GeneratorConfigWithDefaultValues, promises: Promise
 			break
 		case 'node':
 			promises.push(generateNodeAdapter(config))
+			break
+		case 'preact':
+			promises.push(generatePreactAdapter(config))
 			break
 		case 'react':
 			promises.push(generateReactAdapter(config))

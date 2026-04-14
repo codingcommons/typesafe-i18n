@@ -40,6 +40,7 @@ type FileToCheck =
 	| 'angular.service'
 	| 'deno'
 	| 'node'
+	| 'preact'
 	| 'react'
 	| 'solid'
 	| 'svelte'
@@ -63,12 +64,12 @@ const getPathOfOutputFile = (
 
 	const fileEnding =
 		outputFormat === 'TypeScript'
-			? file === 'react'
+			? file === 'react' || file === 'preact'
 				? '.tsx'
 				: '.ts'
 			: file === 'types' || file === 'types-template'
 			? '.d.ts'
-			: file === 'react'
+			: file === 'react' || file === 'preact'
 			? '.jsx'
 			: '.js'
 	return `${outputPath}/${prefix}/${fileName}${fileEnding}`
@@ -136,6 +137,7 @@ const testGeneratedOutput = async (
 		await check(prefix, 'util.async', outputFormat)
 		await check(prefix, 'formatters-template', outputFormat)
 		await check(prefix, 'types-template', outputFormat)
+		await check(prefix, 'preact', outputFormat)
 		await check(prefix, 'react', outputFormat)
 		await check(prefix, 'solid', outputFormat)
 		await check(prefix, 'angular.service', outputFormat)
@@ -394,6 +396,12 @@ testAdapterMatrix(
 )
 
 testAdapterMatrix(
+	'adapter-preact',
+	{ HELLO_PREACT: 'Hi {0:string}' },
+	{ adapter: 'preact', adapterFileName: getFileName('preact') },
+)
+
+testAdapterMatrix(
 	'adapter-react',
 	{ HELLO_REACT: 'Hi {0:string}' },
 	{ adapter: 'react', adapterFileName: getFileName('react') },
@@ -424,6 +432,12 @@ testGeneratedOutput('adapters-empty', { HELLO: 'Hi {0:string}' }, { adapters: []
 testGeneratedOutput('adapters-angular', { HELLO: 'Hi {0:string}' }, { adapters: ['angular'] })
 
 testGeneratedOutput('adapters-node-react', { HELLO_NODE_REACT: 'Hi {0:string}' }, { adapters: ['node', 'react'] })
+
+testGeneratedOutput(
+	'adapters-preact-react-svelte',
+	{ HELLO: 'Hi {0:string}' },
+	{ adapters: ['preact', 'react', 'svelte'] },
+)
 
 testGeneratedOutput('adapters-react-svelte-vue', { HELLO: 'Hi {0:string}' }, { adapters: ['react', 'svelte', 'vue'] })
 

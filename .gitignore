@@ -8,6 +8,7 @@ node_modules
 /formatters
 /importer
 /parser
+/preact
 /react
 /runtime
 /schema

@@ -72,6 +72,21 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6
 
+  packages/adapter-preact:
+    devDependencies:
+      esbuild:
+        specifier: ^0.18.18
+        version: 0.18.18
+      preact:
+        specifier: ^10.17.1
+        version: 10.17.1
+      tsx:
+        specifier: ^3.12.7
+        version: 3.12.7
+      typescript:
+        specifier: ^5.1.6
+        version: 5.1.6
+
   packages/adapter-react:
     devDependencies:
       '@types/react':
@@ -3039,6 +3054,10 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
+
+  /preact@10.17.1:
+    resolution: {integrity: sha512-X9BODrvQ4Ekwv9GURm9AKAGaomqXmip7NQTZgY7gcNmr7XE83adOMJvd3N42id1tMFU7ojiynRsYnY6/BRFxLA==}
     dev: true
 
   /prelude-ls@1.2.1:

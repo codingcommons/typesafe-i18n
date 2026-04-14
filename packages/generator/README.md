@@ -207,8 +207,8 @@ The available options are:
 
 | key                                                       | type                                                                                             | default value                                 |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
-| [adapter](#adapter)                                       | `'angular'  \| 'node'  \| 'react'  \| 'solid'  \| 'svelte'  \| 'vue'  \| undefined` | `undefined`                                   |
-| [adapters](#adapters)                                       | `Array<'angular' \| 'node' \| 'react' \| 'solid' \| 'svelte' \| 'vue'> \| undefined`                           | `undefined`
+| [adapter](#adapter)                                       | `'angular'  \| 'node'  \| 'preact'  \| 'react'  \| 'solid'  \| 'svelte'  \| 'vue'  \| undefined` | `undefined`                                   |
+| [adapters](#adapters)                                       | `Array<'angular' \| 'node' \| 'preact' \| 'react' \| 'solid' \| 'svelte' \| 'vue'> \| undefined`                           | `undefined`
 | [baseLocale](#baselocale)                                 | `string`                                                                                         | `'en'`                                        |
 | [outputFormat](#outputformat)                             | `'TypeScript'` &#124; `'JavaScript'`                                                             | `'TypeScript'`                                |
 | [esmImports](#esmimports)                                 | `boolean | '.js' | 'fileEnding'                                                                                        | `false`                                       |
@@ -358,4 +358,3 @@ const displaySettingsPage = async (locale) => {
 }
 ```
 > make sure to call `setLocale` after you load new namespaces !
-

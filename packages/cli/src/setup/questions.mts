@@ -18,6 +18,7 @@ export const askConfigQuestions = ({ baseLocale, adapter, esmImports, outputForm
 				{ title: 'Angular', value: 'angular', description: 'this is an Angular application' },
 				{ title: 'Node.js', value: 'node', description: 'for Backends, APIs' },
 				{ title: 'React', value: 'react', description: 'this is a React/Next.js application' },
+				{ title: 'Preact', value: 'preact', description: 'this is a Preact application' },
 				{ title: 'Solid', value: 'solid', description: 'this is a SolidJS application' },
 				{ title: 'Svelte', value: 'svelte', description: 'this is a Svelte/SvelteKit/Sapper application' },
 				{ title: 'Vue.js', value: 'vue', description: 'this is a Vue.js application' },
@@ -30,10 +31,14 @@ export const askConfigQuestions = ({ baseLocale, adapter, esmImports, outputForm
 						return 2
 					case 'react':
 						return 3
-					case 'svelte':
+					case 'preact':
 						return 4
-					case 'vue':
+					case 'solid':
 						return 5
+					case 'svelte':
+						return 6
+					case 'vue':
+						return 7
 					default:
 						return 0
 				}

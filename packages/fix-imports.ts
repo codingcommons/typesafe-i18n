@@ -15,6 +15,7 @@ const folders = [
 	'runtime/esm/runtime/src',
 	'formatters',
 	'parser',
+	'preact',
 	'react',
 	'solid',
 	'svelte',

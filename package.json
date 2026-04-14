@@ -22,6 +22,7 @@
 		"svelte",
 		"sveltekit",
 		"react",
+		"preact",
 		"react-native",
 		"nextjs",
 		"expo",
@@ -71,6 +72,11 @@
 			"import": "./parser/index.mjs",
 			"require": "./parser/index.cjs"
 		},
+		"./preact": {
+			"types": "./preact/index.d.ts",
+			"import": "./preact/index.mjs",
+			"require": "./preact/index.cjs"
+		},
 		"./react": {
 			"types": "./react/index.d.ts",
 			"import": "./react/index.mjs",
@@ -113,6 +119,7 @@
 		"/formatters",
 		"/importer",
 		"/parser",
+		"/preact",
 		"/react",
 		"/runtime",
 		"/schema",
@@ -126,7 +133,7 @@
 		"-- DEV -------------------------------------------------": "",
 		"update:dependencies": "pnpm up -r",
 		"update:version": "tsx ./update-version.ts",
-		"clear": "rimraf ./angular ./cli ./config ./detectors ./dist ./exporter ./formatters ./importer ./parser ./react ./runtime ./schema ./solid ./svelte ./types ./utils ./vue ./temp-output",
+		"clear": "rimraf ./angular ./cli ./config ./detectors ./dist ./exporter ./formatters ./importer ./parser ./preact ./react ./runtime ./schema ./solid ./svelte ./types ./utils ./vue ./temp-output",
 		"-- LINT ------------------------------------------------": "",
 		"lint": "eslint --cache packages",
 		"lint:ci": "eslint --cache --fix",
