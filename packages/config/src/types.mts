@@ -1,6 +1,6 @@
 import type { Locale } from '../../runtime/src/core.mjs'
 
-export type Adapters = 'angular' | 'deno' | 'node' | 'react' | 'solid' | 'svelte' | 'vue'
+export type Adapters = 'angular' | 'deno' | 'node' | 'preact' | 'react' | 'solid' | 'svelte' | 'vue'
 
 export type OutputFormats = 'TypeScript' | 'JavaScript'
 

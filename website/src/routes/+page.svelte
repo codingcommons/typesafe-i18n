@@ -3,6 +3,7 @@
 	import iconAngular from '../assets/icons/angular.svg'
 	import iconJavaScript from '../assets/icons/javascript.svg'
 	import iconNodejs from '../assets/icons/nodejs.svg'
+	import iconPreact from '../assets/icons/preact.svg'
 	import iconReact from '../assets/icons/react.svg'
 	import iconSolidjs from '../assets/icons/solidjs.svg'
 	import iconSvelte from '../assets/icons/svelte.svg'
@@ -50,6 +51,13 @@
 			href="https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-react"
 		>
 			<img src={iconReact} alt="React logo" height="70" width="78.7" />
+		</a>
+		<a
+			title="Preact"
+			target="_blank"
+			href="https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-preact"
+		>
+			<img src={iconPreact} alt="Preact logo" height="70" width="78.7" />
 		</a>
 		<a
 			title="Vue.js"

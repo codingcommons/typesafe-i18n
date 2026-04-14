@@ -57,6 +57,9 @@ Click [here](https://codesandbox.io/s/typesafe-i18n-demo-qntgqy?file=/index.ts) 
    <a title="React" href="https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-react">
       <img src="https://raw.githubusercontent.com/ivanhofer/typesafe-i18n/main/assets/icons/react.svg" height="70" hspace="10">
    </a>
+   <a title="Preact" href="https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-preact">
+      <img src="https://raw.githubusercontent.com/ivanhofer/typesafe-i18n/main/assets/icons/preact.svg" height="70" hspace="10">
+   </a>
    <a title="Vue.js" href="https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-vue">
       <img src="https://raw.githubusercontent.com/ivanhofer/typesafe-i18n/main/assets/icons/vuejs.svg" height="70" hspace="10">
    </a>
@@ -162,6 +165,7 @@ You can use `typesafe-i18n` in a variety of project-setups:
  - [Angular](https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-angular) applications
  - [Node.js](https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-node) apis, backends, scripts, ...
  - [React / Next.js](https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-react) applications
+ - [Preact](https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-preact) applications
  - [Solid.js](https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-solid) applications
  - [Svelte / SvelteKit / Sapper](https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-svelte) applications
  - [Vue.js / Nuxt.js](https://github.com/ivanhofer/typesafe-i18n/tree/main/packages/adapter-vue) applications

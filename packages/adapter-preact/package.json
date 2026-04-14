@@ -1,0 +1,15 @@
+{
+  "name": "@typesafe-i18n/adapter-preact",
+  "scripts": {
+    "dev": "tsx esbuild.ts --watch",
+    "build": "tsx esbuild.ts && tsc -p tsconfig.json --emitDeclarationOnly",
+    "test": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.18.18",
+    "preact": "^10.17.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6"
+  },
+  "type": "module"
+}

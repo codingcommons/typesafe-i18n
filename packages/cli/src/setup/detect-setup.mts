@@ -11,6 +11,7 @@ const useAdapterWhenDependenciesContain =
 		shouldContain.reduce((prev, dep) => prev || dependencies.includes(dep), false as boolean)
 
 const shouldUseAngularAdapter = useAdapterWhenDependenciesContain(['@angular/core'])
+const shouldUsePreactAdapter = useAdapterWhenDependenciesContain(['preact'])
 const shouldUseReactAdapter = useAdapterWhenDependenciesContain(['react', 'next'])
 const shouldUseSolidAdapter = useAdapterWhenDependenciesContain(['solid-js'])
 const shouldUseSvelteAdapter = useAdapterWhenDependenciesContain(['svelte', '@sveltejs/kit', 'sapper'])
@@ -21,6 +22,7 @@ const getAdaptersInfo = (type: RuntimeObject['type'], deps: string[]): Adapters[
 	const adapters: Adapters[] = []
 
 	if (shouldUseAngularAdapter(deps)) adapters.push('angular')
+	if (shouldUsePreactAdapter(deps)) adapters.push('preact')
 	if (shouldUseReactAdapter(deps)) adapters.push('react')
 	if (shouldUseSolidAdapter(deps)) adapters.push('solid')
 	if (shouldUseSvelteAdapter(deps)) adapters.push('svelte')
@@ -47,9 +49,12 @@ export const getDefaultConfig = async () => {
 	const esmImports = (await runtime.getEsmImportOption()) && !adapters.includes('svelte')
 
 	const defaultConfig = await getConfigWithDefaultValues()
+	const adapterConfig =
+		adapters.length === 1 ? ({ adapter: adapters[0] } as GeneratorConfig) : adapters.length > 1 ? ({ adapters } as GeneratorConfig) : {}
+
 	const config: GeneratorConfig = {
 		baseLocale: defaultConfig.baseLocale,
-		...(adapters ? (adapters.length === 1 ? { adapter: adapters[0] as Adapters } : { adapters }) : {}),
+		...adapterConfig,
 		esmImports,
 		outputFormat: isTypeScriptProject ? 'TypeScript' : 'JavaScript',
 		outputPath: defaultConfig.outputPath,
