@@ -89,6 +89,7 @@ const transpileTypescriptFiles = async (
 		skipLibCheck: true,
 		sourceMap: false,
 		noLib: true,
+		module: ts.ModuleKind.CommonJS,
 	})
 
 	program.emit()
